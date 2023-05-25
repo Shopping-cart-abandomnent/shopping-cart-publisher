@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abandoned Cart</title>
+</head>
+<body>
+    <h1>Articles recommandés:</h1>
+    <ul>
+        {% for item in cart_items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
