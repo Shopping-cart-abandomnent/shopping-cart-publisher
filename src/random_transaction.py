@@ -1,4 +1,5 @@
 import json
+from time import sleep
 from typing import List
 from google.cloud import bigquery
 import sys
@@ -8,6 +9,7 @@ import os
 
 os.environ["GCLOUD_PROJECT"] = "valued-decker-380221"
 
+PAUSE_DURATION_SECONDS = 30
 
 def get_articles_data():
     query = """
@@ -62,8 +64,6 @@ def send_random_abandonned_cart():
     send_to_pubsub(message)
 
 
-send_random_abandonned_cart()
-
-# while True:
-#     send_random_abandonned_cart()
-#     sleep(60)
+while True:
+    send_random_abandonned_cart()
+    sleep(PAUSE_DURATION_SECONDS)
