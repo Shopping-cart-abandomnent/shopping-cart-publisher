@@ -2,8 +2,7 @@ import json
 from typing import List
 from google.cloud import bigquery
 import sys
-
-sys.path.append('C:/Users/mgbt9/Desktop/ESME/4eANNEE/PROJET/projet/shopping-cart-publisher-main/src')
+sys.path.append('shopping-cart-publisher/src/main.py')
 from pub_sub import send_to_pubsub
 import os
 

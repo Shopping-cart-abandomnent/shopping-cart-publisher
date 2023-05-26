@@ -1,7 +1,7 @@
 from random_transaction import send_random_abandonned_cart
 from flask import Flask, jsonify, render_template
 
-app = Flask(__name__,  template_folder='templates')
+app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/abandoned-cart')
