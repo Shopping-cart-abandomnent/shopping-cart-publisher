@@ -66,4 +66,4 @@ def send_random_abandonned_cart():
 
 while True:
     send_random_abandonned_cart()
-    sleep(PAUSE_DURATION_SECONDS)
+    sleep(30)
