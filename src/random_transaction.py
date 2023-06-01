@@ -3,13 +3,15 @@ from time import sleep
 from typing import List
 from google.cloud import bigquery
 import sys
-sys.path.append('shopping-cart-publisher/src/main.py')
 from pub_sub import send_to_pubsub
 import os
+
+sys.path.append('shopping-cart-publisher/src/main.py')
 
 os.environ["GCLOUD_PROJECT"] = "valued-decker-380221"
 
 PAUSE_DURATION_SECONDS = 30
+
 
 def get_articles_data():
     query = """
@@ -67,3 +69,4 @@ def send_random_abandonned_cart():
 while True:
     send_random_abandonned_cart()
     sleep(30)
+    #sleep(864)  # Based on SendGrid free trial : 100 emails  per day
