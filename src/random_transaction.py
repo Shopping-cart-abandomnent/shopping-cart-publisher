@@ -68,5 +68,5 @@ def send_random_abandonned_cart():
 
 while True:
     send_random_abandonned_cart()
-    sleep(30)
-    #sleep(864)  # Based on SendGrid free trial : 100 emails  per day
+    #sleep(30)
+    sleep(864)  # Based on SendGrid free trial : 100 emails  per day
